@@ -1,0 +1,33 @@
+@import 'variables';
+@import 'mixins';
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    @media (min-width: 1700px) {
+        font-size: 1.2vmax ;
+    }
+}
+header, footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+main{
+    flex-grow: 1;
+    background-color: $bg-color;
+}
+h1, h2 {
+    font-family: "Roboto Condensed" , sans-serif;
+}

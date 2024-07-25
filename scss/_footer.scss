@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'mixins';
+
+footer{
+    background-color: #333333;
+    height: 180px;
+    text-align: center;
+    @include flex (column);
+    gap: 40px;
+    padding: 30px;
+    font-size: 14px;
+    color: $bg-color;
+    a {
+        color: $second-clr;
+        font-weight: 500;
+    }
+}

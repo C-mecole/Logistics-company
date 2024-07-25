@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'mixins';
+
+header {
+    @include flex (row);
+    justify-content: space-between;
+    height: 80px;
+    padding-inline: 100px;
+    background-color: #f2f2f2;
+    position: sticky;
+    .menu-icon {
+        font-size: 30px;
+    }
+    .logo {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        img {
+            @include img ;
+        }
+    }
+    @media ( max-width: 600px){
+        padding-inline: 50px;
+    }
+    @media ( max-width: 360px){
+        padding-inline: 10px;
+    }
+}

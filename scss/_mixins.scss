@@ -1,0 +1,75 @@
+@import 'variables';
+
+
+
+@mixin flex ($dir) {
+    display: flex;
+    flex-direction: $dir;
+    align-items: center;
+}
+@mixin flex-col ($gp) {
+    display: flex;
+    flex-direction: column;
+    gap: $gp ;
+    justify-content: center;
+}
+
+@mixin btn {
+    padding: 20px;
+    width: 200px;
+    text-transform: uppercase;
+    background-color: $first-clr;
+    color: $bg-color;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    &:hover{
+        background-color: $second-clr;
+    }
+    @media (max-width: 400px){
+        width: 170px;
+        padding: 10px;
+    }
+}
+@mixin image ($hit, $wit) {
+    height: $hit;
+    width: $wit;
+    border-radius:50%;
+    img {
+        @include img ;
+    }
+}
+
+@mixin img {
+    height: inherit;
+    width: 100%;
+    object-fit: cover;
+}
+@mixin border {
+    border: 1px solid red;
+}
+@mixin span {
+    font-style: italic;
+    a {
+        color: black;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 1px;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+@mixin grid ($col, $row) {
+    display: grid;
+    grid-template-columns: $col;
+    grid-template-rows: $row;
+}
+@mixin card ($hit, $wit, $align) {
+    height: $hit;
+    width: $wit;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: $align;
+}
